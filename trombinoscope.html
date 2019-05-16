@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>Trombinoscope</title>
+		
+		<!-- Lien vers le fichier de mise en forme trombi.css -->
+		<link type="text/css" rel="stylesheet" href="css/trombicss.css" />
+		
+		<!-- Lien vers le fichier javascript  jquery-3.4.1.min.js (pour utiliser les fonctions de ce fichier) -->
+		<script type="text/javascript"  src="js/jquery-3.4.1.min.js" ></script>
+		
+		<!-- Lien vers le fichier javascript  trombi.js (pour utiliser les fonctions de ce fichier) -->
+		<script type="text/javascript"  src="js/trombi.js" ></script>
+	</head>
+	
+	<body>
+	
+		<h1>TROMBINOSCOPE</h1>
+		
+		<br/>
+		
+		<!-- Création d'un bouton qui appelle la fonction JavaScript "afficherTrombinoscope() quand on clique dessus -->
+		<input type="button" value="Afficher le trombinoscope" onClick="afficherTrombinoscope();"/>
+		
+		<br/>
+		
+		<br/>
+		
+		<div id="iddiv1">
+			<!-- Formulaire permettant d'ajouter une ligne au tableau du trombinoscope -->
+			<!-- Attention actuellement la photo ne peut pas être chargé, la photo par défaut est chargée à la place -->
+			<form method="GET" action="#" target="_self" id="idformadd">
+					<input type="text" placeholder="Nom" id="idnom" required /><br/>
+					<input type="text" placeholder="Prenom" id="idprenom" required /><br/>
+					<label for="idphoto"> Photo : </label> <input type="file" id="idphoto" required/><br/>
+				<input type="submit" value="Ajouter" onclick="ajout_Eleve()" />
+			</form>
+		</div>
+		
+		<!-- Création d'une division -->
+		<div id="iddiv2">
+	
+		</div>
+	
+	</body>
+</html>
